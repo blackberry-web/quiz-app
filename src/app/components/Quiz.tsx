@@ -10,11 +10,10 @@ import '../../app/globals.css';
 export const Quiz = () => {
     const [count, setCount] = useState(0);
     const [result, setResult] = useState<boolean[]>([]);
-
     const { data, isLoading, isError, refetch } = useQuery({ queryKey: ['quiz'], queryFn: generateQuizQuestions });
 
     if(isLoading){
-        return <LoadingButton>Question is loading...</LoadingButton>
+        return <LoadingButton fullWidth={true} variant="text" size='medium' loadingIndicator="Loading" loadingPosition="start">Question is loading...</LoadingButton>
     }
 
     if(isError){
