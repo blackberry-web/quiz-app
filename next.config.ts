@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    baseUrl: 'https://opentdb.com',
+  },
 };
 
 export default nextConfig;
